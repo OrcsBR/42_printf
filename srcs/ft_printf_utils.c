@@ -6,7 +6,7 @@
 /*   By: peduardo < peduardo@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 18:07:40 by peduardo          #+#    #+#             */
-/*   Updated: 2021/10/25 22:53:18 by peduardo         ###   ########.fr       */
+/*   Updated: 2021/10/28 22:32:57 by peduardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,24 +41,24 @@ int	ft_uuitoa(unsigned int *nbr, int base, char conv)
 	int		i;
 
 	i = 0;
-	while(*nbr)
+	while (*nbr)
 	{
 		digit = *nbr % base;
+		aux = '0' + digit;
 		if (digit > 9)
+		{
+			aux = 'a' + (digit - 10);
 			if (conv == 'X')
 				aux = 'A' + (digit - 10);
-			else
-				aux = 'a' + (digit - 10);
-		else
-			aux = '0' + digit;
+		}
 		*nbr = *nbr / base;
 		result[i++] = aux;
 	}
 	result[i] = '\0';
 	ft_strrev(result);
 	ft_putstr_fd(result, 1);
-	res_count =  ft_strlen(result);
-	return(res_count);
+	res_count = ft_strlen(result);
+	return (res_count);
 }
 
 int	ft_ptrtoa(size_t *nbr, int base, char conv)
@@ -70,22 +70,22 @@ int	ft_ptrtoa(size_t *nbr, int base, char conv)
 	int		i;
 
 	i = 0;
-	while(*nbr)
+	while (*nbr)
 	{
 		digit = *nbr % base;
+		aux = '0' + digit;
 		if (digit > 9)
+		{
+			aux = 'a' + (digit - 10);
 			if (conv == 'X')
 				aux = 'A' + (digit - 10);
-			else
-				aux = 'a' + (digit - 10);
-		else
-			aux = '0' + digit;
+		}
 		*nbr = *nbr / base;
 		result[i++] = aux;
 	}
 	result[i] = '\0';
 	ft_strrev(result);
 	ft_putstr_fd(result, 1);
-	res_count =  ft_strlen(result);
-	return(res_count);
+	res_count = ft_strlen(result);
+	return (res_count);
 }

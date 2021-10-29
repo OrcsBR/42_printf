@@ -6,7 +6,7 @@
 /*   By: peduardo < peduardo@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 02:25:02 by peduardo          #+#    #+#             */
-/*   Updated: 2021/10/25 21:33:53 by peduardo         ###   ########.fr       */
+/*   Updated: 2021/10/28 22:05:20 by peduardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 static void	ft_switchboard(char conv, va_list *args, int *ch_count)
 {
-	if(conv == 'c')
+	if (conv == 'c')
 		ft_char_conv(args, ch_count);
 	else if (conv == 's')
 		ft_string_conv(args, ch_count);
 	else if (conv == 'p')
 		ft_pointer_conv(args, ch_count);
-	else if (conv == 'd'|| conv == 'i')
+	else if (conv == 'd' || conv == 'i')
 		ft_int_conv(args, ch_count);
 	else if (conv == 'u')
 		ft_uint_conv(args, ch_count);
-	else if (conv == 'x'||conv == 'X')
+	else if (conv == 'x' || conv == 'X')
 		ft_hex_conv(args, ch_count, conv);
 	else if (conv == '%')
 	{
@@ -42,11 +42,11 @@ static void	ft_switchboard(char conv, va_list *args, int *ch_count)
 int	ft_printf(const char *text, ...)
 {
 	va_list	args;
-	int ch_count;
+	int		ch_count;
 
 	ch_count = 0;
 	if (!text)
-		return(0);
+		return (0);
 	va_start(args, text);
 	while (*text)
 	{

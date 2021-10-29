@@ -1,4 +1,11 @@
 .vscode/
+libraries/libft/*.o
+libraries/libft/libft.a
+ft_printf_tester/
+printfTester/
+objs/
 main.c
 a.out
 ft_libftutils.c
+libftprintf.a
+

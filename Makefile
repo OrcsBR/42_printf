@@ -37,6 +37,6 @@ fclean: clean
 	$(MAKE) -C $(LIBFT_PATH) fclean
 	rm -rf $(NAME)
 
-re:		fclean all
+re: clean all
 
 .PHONY : all clean fclean re libft

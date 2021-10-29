@@ -6,16 +6,14 @@
 /*   By: peduardo < peduardo@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 21:10:35 by peduardo          #+#    #+#             */
-/*   Updated: 2021/10/24 13:14:36 by peduardo         ###   ########.fr       */
+/*   Updated: 2021/10/26 23:12:02 by peduardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# define INT_MIN -2147483648
-# define INT_MAX 2147483647
-
+# include <limits.h>
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>

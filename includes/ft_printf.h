@@ -6,7 +6,7 @@
 /*   By: peduardo < peduardo@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 12:08:20 by peduardo          #+#    #+#             */
-/*   Updated: 2021/10/24 16:18:53 by peduardo         ###   ########.fr       */
+/*   Updated: 2021/10/27 00:16:54 by peduardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@
 # include <stdarg.h>
 # include "../libraries/libft/libft.h"
 
-# define INT_MIN -2147483648
-# define INT_MAX 2147483647
+# if __APPLE__
+#  define IS_MACOS 1
+# else
+#  define IS_MACOS 0
+# endif
 
 char	*ft_strdup(char *src);
 char	*ft_itoa(int n);
@@ -32,7 +35,8 @@ void	ft_int_conv(va_list *args, int *ch_count);
 void	ft_uint_conv(va_list *args, int *ch_count);
 void	ft_hex_conv(va_list *args, int *ch_count, char conv);
 void	ft_strrev(char *str);
-int		ft_uuitoa(unsigned long long int *nbr, int base, char conv);
+int		ft_uuitoa(unsigned int *nbr, int base, char conv);
+int		ft_ptrtoa(size_t *nbr, int base, char conv);
 
 /**
  * @brief

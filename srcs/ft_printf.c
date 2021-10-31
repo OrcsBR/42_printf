@@ -6,13 +6,13 @@
 /*   By: peduardo < peduardo@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 02:25:02 by peduardo          #+#    #+#             */
-/*   Updated: 2021/10/28 22:05:20 by peduardo         ###   ########.fr       */
+/*   Updated: 2021/10/31 15:06:12 by peduardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_switchboard(char conv, va_list *args, int *ch_count)
+static void	ft_switchboard(char conv, va_list *args, unsigned int *ch_count)
 {
 	if (conv == 'c')
 		ft_char_conv(args, ch_count);
@@ -41,8 +41,8 @@ static void	ft_switchboard(char conv, va_list *args, int *ch_count)
 
 int	ft_printf(const char *text, ...)
 {
-	va_list	args;
-	int		ch_count;
+	va_list				args;
+	unsigned int		ch_count;
 
 	ch_count = 0;
 	if (!text)

@@ -6,7 +6,7 @@
 /*   By: peduardo < peduardo@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 18:07:40 by peduardo          #+#    #+#             */
-/*   Updated: 2021/10/28 22:32:57 by peduardo         ###   ########.fr       */
+/*   Updated: 2021/10/31 15:45:47 by peduardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	ft_uuitoa(unsigned int *nbr, int base, char conv)
 	return (res_count);
 }
 
-int	ft_ptrtoa(size_t *nbr, int base, char conv)
+int	ft_ptrtoa(unsigned long *nbr, int base, char conv)
 {
 	char	result[256];
 	char	aux;

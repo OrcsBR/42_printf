@@ -6,15 +6,15 @@
 /*   By: peduardo < peduardo@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 21:36:56 by peduardo          #+#    #+#             */
-/*   Updated: 2021/10/28 22:22:42 by peduardo         ###   ########.fr       */
+/*   Updated: 2021/10/31 15:08:08 by peduardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_uint_conv(va_list *args, int *ch_count)
+void	ft_uint_conv(va_list *args, unsigned int *ch_count)
 {
-	size_t			res_count;
+	unsigned int	res_count;
 	unsigned int	result;
 
 	res_count = 0;
@@ -27,6 +27,6 @@ void	ft_uint_conv(va_list *args, int *ch_count)
 	else
 	{
 		res_count = ft_uuitoa(&result, 10, 'u');
-		*ch_count = *ch_count + res_count;
+		*ch_count += res_count;
 	}
 }

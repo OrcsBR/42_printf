@@ -6,7 +6,7 @@
 /*   By: peduardo < peduardo@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 12:08:20 by peduardo          #+#    #+#             */
-/*   Updated: 2021/10/28 22:22:14 by peduardo         ###   ########.fr       */
+/*   Updated: 2021/10/31 15:19:26 by peduardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,12 @@ char	*ft_itoa(int n);
 size_t	ft_strlen(const char *s);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
-
-void	ft_char_conv(va_list *args, int *ch_count);
-void	ft_string_conv(va_list *args, int *ch_count);
-void	ft_pointer_conv(va_list *args, int *ch_count);
-void	ft_int_conv(va_list *args, int *ch_count);
-void	ft_uint_conv(va_list *args, int *ch_count);
-void	ft_hex_conv(va_list *args, int *ch_count, char conv);
+void	ft_char_conv(va_list *args, unsigned int *ch_count);
+void	ft_string_conv(va_list *args, unsigned int *ch_count);
+void	ft_pointer_conv(va_list *args, unsigned int *ch_count);
+void	ft_int_conv(va_list *args, unsigned int *ch_count);
+void	ft_uint_conv(va_list *args, unsigned int *ch_count);
+void	ft_hex_conv(va_list *args, unsigned int *ch_count, char conv);
 void	ft_strrev(char *str);
 int		ft_uuitoa(unsigned int *nbr, int base, char conv);
 int		ft_ptrtoa(size_t *nbr, int base, char conv);

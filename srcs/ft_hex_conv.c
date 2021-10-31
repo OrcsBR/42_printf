@@ -6,16 +6,16 @@
 /*   By: peduardo < peduardo@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 21:39:11 by peduardo          #+#    #+#             */
-/*   Updated: 2021/10/28 22:22:25 by peduardo         ###   ########.fr       */
+/*   Updated: 2021/10/31 14:40:38 by peduardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_hex_conv(va_list *args, int *ch_count, char conv)
+void	ft_hex_conv(va_list *args, unsigned int *ch_count, char conv)
 {
 	unsigned int	nbr;
-	size_t			res_count;
+	unsigned int	res_count;
 
 	res_count = 0;
 	nbr = va_arg(*args, unsigned int);
